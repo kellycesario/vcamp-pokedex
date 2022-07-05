@@ -18,4 +18,3 @@ const PokedexListItem = () => {
     </li>
   )
 }
-export default PokedexListItem
