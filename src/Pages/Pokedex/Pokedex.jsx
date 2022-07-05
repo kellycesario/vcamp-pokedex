@@ -1,4 +1,4 @@
-import PokedexListItem from '../../Molecules/PokedexListItem'
+import PokedexListItem from '../../Molecules/listTest'
 import './styles.scss'
 
 const Pokedex = () => {
