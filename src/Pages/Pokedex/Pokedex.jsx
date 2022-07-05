@@ -1,6 +1,6 @@
-import PokedexListItem from '../../Molecules/listTest'
-import Navbar from '../../Organisms/Navbar'
-import Popup from '../../Organisms/Popup'
+import PokedexListItem from '@components/Molecules/listTest'
+import Navbar from '@components/Organisms/Navbar'
+import Popup from '@components/Organisms/Popup'
 import './styles.scss'
 
 const Pokedex = () => {
