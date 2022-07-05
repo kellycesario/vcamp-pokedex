@@ -1,0 +1,23 @@
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+  height: 90px;
+  margin-bottom: 30px;
+}
+
+.navigation__button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
+}
+/*# sourceMappingURL=styles.css.map */

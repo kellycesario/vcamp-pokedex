@@ -1,0 +1,64 @@
+@import url(//db.onlinewebfonts.com/c/961a181da27e7cbc072ec2fb5bbfe2a9?family=Circular+Std+Bold);
+
+* {
+    margin: 0;
+    font-family: 'Circular Std', sans-serif;
+}
+
+$bgColor: #F5F5F5;
+
+.homepage {
+    padding: 0 26px;
+    background-image: url(/public/assets/images/pokeball.svg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    position: absolute;
+    
+    &__title {
+        width: 316px;
+        height: 66px;
+        margin: 117px 0 40px;
+
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 42px;
+        color: #303943;
+        text-align: center;
+    }
+
+    @mixin form-basic-elements {
+        background: $bgColor;
+        border: none;
+        outline: none;
+        border-radius: 100px;
+    }
+
+    &__form {
+        @include form-basic-elements;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        width: 324px;
+        height: 45px;
+        margin-bottom: 40px;
+    }
+
+    &__input {
+        @include form-basic-elements;
+        width: 75%;
+    }
+
+    &__button {
+        @include form-basic-elements;
+        padding-left: 18px;
+
+            &::-webkit-input-placeholder {
+            width: 229px;
+            height: 28px;
+            font-size: 14px;
+            line-height: 42px;
+            color: #303943;
+            opacity: 0.4;
+        }
+    }
+}

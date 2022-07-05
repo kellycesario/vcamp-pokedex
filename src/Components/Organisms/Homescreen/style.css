@@ -1,0 +1,70 @@
+@import url(//db.onlinewebfonts.com/c/961a181da27e7cbc072ec2fb5bbfe2a9?family=Circular+Std+Bold);
+* {
+  margin: 0;
+  font-family: 'Circular Std', sans-serif;
+}
+
+.homepage {
+  padding: 0 26px;
+  background-image: url(/public/assets/images/pokeball.svg);
+  background-position: right top;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.homepage__title {
+  width: 316px;
+  height: 66px;
+  margin: 117px 0 40px;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 42px;
+  color: #303943;
+  text-align: center;
+}
+
+.homepage__form {
+  background: #F5F5F5;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 324px;
+  height: 45px;
+  margin-bottom: 40px;
+}
+
+.homepage__input {
+  background: #F5F5F5;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  width: 75%;
+}
+
+.homepage__button {
+  background: #F5F5F5;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  padding-left: 18px;
+}
+
+.homepage__button::-webkit-input-placeholder {
+  width: 229px;
+  height: 28px;
+  font-size: 14px;
+  line-height: 42px;
+  color: #303943;
+  opacity: 0.4;
+}
+/*# sourceMappingURL=style.css.map */
