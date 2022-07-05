@@ -1,33 +1,31 @@
-import PokedexListItem from '../../Molecules/PokedexListItem'
+import PokedexListItem from '../../Molecules/listTest'
+import Navbar from '../../Organisms/Navbar'
+import Popup from '../../Organisms/Popup'
 import './styles.scss'
 
 const Pokedex = () => {
   return (
     <div className='pokedexPage'>
-
-      <div className='navigation'>
-
-        <div className='navigation__backBtnContainer'>
-          <button className='navigation__backBtn'>
-            {'<-'}
-          </button>
-        </div>
-
-        <div className='navigation__toggleContainer'>
-          <button className='navigation__toggle'>
-            {'='}
-          </button>
+      <div className="pokedexPage__container">
+        <Navbar />
+        <div className="pokedex">
+          <h2 className='pokedex__title'>Pokedex</h2>
+          <ul className="pokedex__list">
+            <PokedexListItem />
+            <PokedexListItem />
+            <PokedexListItem />
+            <PokedexListItem />
+            <PokedexListItem />
+            <PokedexListItem />
+            <PokedexListItem />
+            <PokedexListItem />
+            <PokedexListItem />
+            <PokedexListItem />
+            <Popup />
+          </ul>
         </div>
 
       </div>
-
-      <div className="pokedex">
-        <h2>Pokedex</h2>
-        <ul className="pokedex__list">
-          <PokedexListItem />
-        </ul>
-      </div>
-
     </div>
   )
 }
