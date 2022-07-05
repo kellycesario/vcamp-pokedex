@@ -1,0 +1,30 @@
+@import url('http://fonts.cdnfonts.com/css/circular-std');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Circular Std', sans-serif;
+}
+
+.pokedexPage {}
+
+.navigation {
+
+  &__backBtnContainer {}
+
+  &__backBtn {}
+
+  &__toggleContainer {}
+
+  &__toggle {}
+}
+
+.pokedex {
+
+  &__list {
+    list-style: none;
+  }
+
+
+}

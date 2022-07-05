@@ -1,7 +1,12 @@
+import PokedexListItem from '../../Molecules/PokedexListItem'
+import './styles.scss'
+
 const Pokedex = () => {
   return (
     <div className='pokedexPage'>
+
       <div className='navigation'>
+
         <div className='navigation__backBtnContainer'>
           <button className='navigation__backBtn'>
             {'<-'}
@@ -13,7 +18,16 @@ const Pokedex = () => {
             {'='}
           </button>
         </div>
+
       </div>
+
+      <div className="pokedex">
+        <h2>Pokedex</h2>
+        <ul className="pokedex__list">
+          <PokedexListItem />
+        </ul>
+      </div>
+
     </div>
   )
 }
