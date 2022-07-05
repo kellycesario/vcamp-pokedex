@@ -7,23 +7,32 @@
   font-family: 'Circular Std', sans-serif;
 }
 
-.pokedexPage {}
+.pokedexPage {
+  background-image: url(/public/assets/images/pokeball.svg);
+  background-position: right top;
+  background-repeat: no-repeat;
 
-.navigation {
-
-  &__backBtnContainer {}
-
-  &__backBtn {}
-
-  &__toggleContainer {}
-
-  &__toggle {}
+  &__container {
+    margin: 0 auto;
+    width: 85%;
+  }
 }
 
 .pokedex {
 
+  &__title {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 38px;
+    color: #303943;
+    margin-bottom: 40px;
+  }
+
   &__list {
     list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
   }
 
 
