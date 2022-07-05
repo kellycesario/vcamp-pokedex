@@ -6,7 +6,7 @@ const PokedexListItem = () => {
         <span className="listItem__pokemonNumber">#001</span>
         <h2 className="listItem__pokemonName">Bubassaur</h2>
       </header>
-      <div className="listItem__InfoContainer">
+      <div className="listItem__infoContainer">
         <div className="listItem__pokemonInfoContainer">
           <span className="listItem__pokemonType">Grass</span>
           <span className="listItem__pokemonType">Poison</span>
