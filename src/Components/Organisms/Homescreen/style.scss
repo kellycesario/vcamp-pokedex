@@ -5,20 +5,31 @@
     font-family: 'Circular Std', sans-serif;
 }
 
-$bgColor: #F5F5F5;
+$bgFormColor: #F5F5F5;
+$bgContainerColor: #E5E5E5;
+$bgHomepageColor: #FFFFFF;
 
-.homepage {
-    padding: 0 26px;
+@mixin form-basic-elements {
+    background: $bgFormColor;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+}
+
+.homepageContainer {
     background-image: url(/public/assets/images/pokeball.svg);
     background-position: right top;
     background-repeat: no-repeat;
     position: absolute;
-    
-    &__title {
-        width: 316px;
-        height: 66px;
-        margin: 117px 0 40px;
+    width: 100%;
+}
 
+.homepage {
+    background-color: $bgHomepageColor;
+    display: contents;
+
+    &__title {
+        margin: 117px 30px 40px;
         font-size: 30px;
         font-weight: 800;
         line-height: 42px;
@@ -26,39 +37,70 @@ $bgColor: #F5F5F5;
         text-align: center;
     }
 
-    @mixin form-basic-elements {
-        background: $bgColor;
-        border: none;
-        outline: none;
-        border-radius: 100px;
-    }
-
     &__form {
         @include form-basic-elements;
         display: flex;
         flex-direction: row-reverse;
         justify-content: center;
-        width: 324px;
-        height: 45px;
-        margin-bottom: 40px;
+        max-width: 324px;
+        margin: 0 auto;
     }
 
     &__input {
         @include form-basic-elements;
-        width: 75%;
-    }
+        height: 45px;
+        width: 70%;
 
-    &__button {
-        @include form-basic-elements;
-        padding-left: 18px;
-
-            &::-webkit-input-placeholder {
+        &::placeholder {
             width: 229px;
-            height: 28px;
             font-size: 14px;
             line-height: 42px;
             color: #303943;
             opacity: 0.4;
+            display: flex;
+            align-items: center;
+            text-align: center !important;
+        }
+    }
+
+    &__button {
+        @include form-basic-elements;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .homepage {
+        width: 100%;
+        
+        &__title {
+            font-size: 35px;
+        }
+
+        &__form {
+            max-width: 524px;
+        }
+
+        &__input {
+            display: flex;
+            justify-content: center;
+                
+            &::-webkit-input-placeholder {
+                width: 345px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .homepage {
+        width: 100%;
+        
+        &__title {
+            font-size: 45px;
+        }
+
+        &__form {
+            max-width: 624px;
         }
     }
 }
