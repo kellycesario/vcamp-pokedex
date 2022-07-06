@@ -136,6 +136,15 @@
   .homepage__input::-webkit-input-placeholder {
     width: 345px;
   }
+  .homepage__input:-ms-input-placeholder {
+    width: 345px;
+  }
+  .homepage__input::-ms-input-placeholder {
+    width: 345px;
+  }
+  .homepage__input::placeholder {
+    width: 345px;
+  }
 }
 
 @media screen and (min-width: 1024px) {

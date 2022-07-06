@@ -84,7 +84,7 @@ $bgHomepageColor: #FFFFFF;
             display: flex;
             justify-content: center;
                 
-            &::-webkit-input-placeholder {
+            &::placeholder {
                 width: 345px;
             }
         }
