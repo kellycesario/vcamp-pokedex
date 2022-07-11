@@ -12,7 +12,7 @@
     margin-top: 42px;
 }
 
-.categoryButtons{
+.categoryButtons {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -41,5 +41,42 @@
 
     &__item {
         list-style-type: none;
+        &:hover {
+            transform: scale(1.1);
+            transition: 2s;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .categoryButtons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 700px;
+
+        &__image {
+            width: 250px;
+            height: 130px;
+        }
+
+        &__text {
+            position: absolute;
+            margin-top: -94px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .categoryButtons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 950px;
+
+        &__text {
+            position: absolute;
+            margin-top: -94px;
+        }
     }
 }

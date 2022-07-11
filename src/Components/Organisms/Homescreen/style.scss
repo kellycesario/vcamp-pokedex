@@ -50,16 +50,17 @@ $bgHomepageColor: #FFFFFF;
         @include form-basic-elements;
         height: 45px;
         width: 70%;
+        color: #303943;
 
         &::placeholder {
+            display: flex;
+            align-items: center;
+            text-align: center !important;
             width: 229px;
             font-size: 14px;
             line-height: 42px;
             color: #303943;
             opacity: 0.4;
-            display: flex;
-            align-items: center;
-            text-align: center !important;
         }
     }
 
@@ -85,6 +86,9 @@ $bgHomepageColor: #FFFFFF;
             justify-content: center;
                 
             &::placeholder {
+                display: flex;
+                align-items: center;
+                text-align: center !important;
                 width: 345px;
             }
         }

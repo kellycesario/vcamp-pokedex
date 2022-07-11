@@ -1,4 +1,5 @@
 import React from "react";
+import CategoryButtons from "@components/organisms/categorybuttons";
 import './style.scss';
 import search from "@assets/icons/search.svg";
 
@@ -12,7 +13,7 @@ const Homepage = () => {
                     <input className="homepage__input" type="text" placeholder="Search Pokemon, Move, Ability, etc." />
                     <button className="homepage__button"> <img src={search} /> </button>
                 </form>
-                {/* importar a molécula card de botões*/}    
+                <CategoryButtons />    
             </div>
             {/* importar pokemon news*/}        
         </section>
