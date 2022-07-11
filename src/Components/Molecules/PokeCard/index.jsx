@@ -19,19 +19,19 @@ const PokeCard = (props) => {
             </div>
 
             <div className="pokeCard__info">
-                <p className="pokeCard__name">Bulbasaur</p>
-                <p className="pokeCard__id">#001</p>
+                <p className="pokeCard__name">{props.name}</p>
+                <p className="pokeCard__id">{props.id}</p>
             </div>
 
             <div className="pokeCard__units">
-                <p className="pokeCard__element">Grass</p>
-                <p className="pokeCard__element">Poison</p>
-                <p className="pokeCard__type">Seed Pokemon</p>
+                <p className="pokeCard__element">{props.element}</p>
+                <p className="pokeCard__element">{props.element}</p>
+                <p className="pokeCard__type">{props.type}</p>
             </div>
 
             <div className="pokeCard__images">
                 <img className="pokeCard__pokeballBackground" src={backgroundPokeball} />
-                <img className="pokeCard__pokemonImage" src={Bulba} /> 
+                <img className="pokeCard__pokemonImage" src={props.pokeImage} /> 
             </div>
 
             <div className="pokeCard__menu">
