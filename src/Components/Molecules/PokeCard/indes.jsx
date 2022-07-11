@@ -10,11 +10,11 @@ const PokeCard = (props) => {
         <section className="pokeCard">
             
             <img src={background} className="pokeCard__backgroundImage" />
-            <img src = {dottedImage}  className="pokeCard__dottedImage" />
+            <img src={dottedImage}  className="pokeCard__dottedImage" />
             
             <div className="pokeCard__icons">
-                <img src={leftArrow} className="pokeCard__arrow" />
-                <img src={heartImage} className="pokeCard__heart" />
+                <img src={leftArrow} className="pokeCard__arrowImage" />
+                <img src={heartImage} className="pokeCard__heartImage" />
             </div>
 
             <div className="pokecard__info">
@@ -31,7 +31,7 @@ const PokeCard = (props) => {
                     <li className="pokeCard__item">About</li>
                     <li className="pokeCard__item">Base Stats</li>
                     <li className="pokeCard__item">Evolution</li>
-                    <li >Moves</li>
+                    <li className="pokeCard__item">Moves</li>
                 </ul>
             </div>
         </section>
