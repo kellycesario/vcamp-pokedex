@@ -13,16 +13,16 @@ const PokeCard = (props) => {
             <img src = {dottedImage}  className="pokeCard__dottedImage" />
             
             <div className="pokeCard__icons">
-                <img src={leftArrow} alt="" className="pokeCard__arrow" />
+                <img src={leftArrow} className="pokeCard__arrow" />
                 <img src={heartImage} className="pokeCard__heart" />
             </div>
 
             <div className="pokecard__info">
-                <span className="pokecard__name">{props.name}</span>
-                <span className="pokecard__id">{props.id}</span>
-                <span className="pokecard__element">{props.element}</span>
-                <span className="pokecard__type">{props.type}</span>
-                <img src={props.image} alt="" /> 
+                <p className="pokecard__name">{props.name}</p>
+                <p className="pokecard__id">{props.id}</p>
+                <p className="pokecard__element">{props.element}</p>
+                <p className="pokecard__type">{props.type}</p>
+                <img src={props.image} /> 
             </div>
 
             <div className="pokeCard__menu">
