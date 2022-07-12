@@ -19,7 +19,6 @@
 }
 
 .pokedex {
-
   &__title {
     font-size: 30px;
     font-weight: 800;
@@ -32,8 +31,6 @@
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2%;
+    gap: 10px;
   }
-
-
 }
