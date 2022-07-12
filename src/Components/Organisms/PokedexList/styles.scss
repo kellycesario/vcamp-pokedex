@@ -1,0 +1,19 @@
+.pokedex {
+
+  &__title {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 38px;
+    color: #303943;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
+  }
+
+
+}

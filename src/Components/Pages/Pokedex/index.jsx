@@ -1,13 +1,34 @@
-import { useEffect } from 'react'
-
-import PokedexListItem from '@components/Molecules/PokemonCard'
+import PokemonCard from '@components/Molecules/PokemonCard'
 import Navbar from '@components/Organisms/Navbar'
 import Popup from '@components/Organisms/Popup'
+import { useEffect } from 'react'
+import { useState } from 'react'
+
 import './styles.scss'
-import useFetch from '@hooks/usePokemonFetch'
 
 const Pokedex = () => {
-  const { pokemonData } = useFetch()
+  const [pokemonList, setPokemonList] = useState([])
+
+  const getPokemonList = async () => {
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=150`)
+    const data = await res.json()
+
+    const { results } = data
+
+    console.log('results', results)
+
+    results.forEach(async (pokemon) => {
+      const res = await fetch(pokemon.url)
+      const data = await res.json()
+      setPokemonList(prevList => [...prevList, data])
+      console.log('entrou forEach')
+    })
+  }
+  console.log('pokemonlist', pokemonList)
+
+  useEffect(() => {
+    getPokemonList()
+  }, [])
 
   return (
     <div className='pokedexPage'>
@@ -16,7 +37,11 @@ const Pokedex = () => {
         <div className="pokedex">
           <h2 className='pokedex__title'>Pokedex</h2>
           <ul className="pokedex__list">
-            <PokedexListItem />
+            {pokemonList.map(pokemon => {
+              return (
+                <PokemonCard name={pokemon.name} id={pokemon.id} types={pokemon.types} sprites={pokemon.sprites} key={pokemon.id} />
+              )
+            })}
             <Popup />
           </ul>
         </div>

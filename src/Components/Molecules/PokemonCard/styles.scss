@@ -9,6 +9,7 @@
   width: 155px;
   display: grid;
   grid-template-columns: 50% 50%;
+  row-gap: 0;
   padding: 10px 6px;
 
   &__pokemonInfoLeft {
