@@ -15,16 +15,12 @@ const Pokedex = () => {
 
     const { results } = data
 
-    console.log('results', results)
-
     results.forEach(async (pokemon) => {
       const res = await fetch(pokemon.url)
       const data = await res.json()
       setPokemonList(prevList => [...prevList, data])
-      console.log('entrou forEach')
     })
   }
-  console.log('pokemonlist', pokemonList)
 
   useEffect(() => {
     getPokemonList()

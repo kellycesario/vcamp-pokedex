@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './styles.scss'
 
 export const capitalize = (str = "") => {
@@ -12,13 +13,15 @@ export const formatId = (id) => {
 };
 
 const PokemonCard = ({ name, types, id, sprites }) => {
+
   return (
-    <li className="pokemonCard">
+    <li className={`pokemonCard pokemonCard--${types[0].type.name}`}>
+
       <div className="pokemonCard__pokemonInfoLeft">
         <h2 className="pokemonCard__pokemonName">{capitalize(name)}</h2>
         {types.map(item => {
           return (
-            <span className="pokemonCard__pokemonType">{item.type.name}</span>
+            <span key={item.slot} className="pokemonCard__pokemonType">{item.type.name}</span>
           )
         })}
       </div>
