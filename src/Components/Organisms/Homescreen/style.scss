@@ -1,0 +1,110 @@
+@import url(//db.onlinewebfonts.com/c/961a181da27e7cbc072ec2fb5bbfe2a9?family=Circular+Std+Bold);
+
+* {
+    margin: 0;
+    font-family: 'Circular Std', sans-serif;
+}
+
+$bgFormColor: #F5F5F5;
+$bgContainerColor: #E5E5E5;
+$bgHomepageColor: #FFFFFF;
+
+@mixin form-basic-elements {
+    background: $bgFormColor;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+}
+
+.homepageContainer {
+    background-image: url(/public/assets/images/pokeball.svg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+}
+
+.homepage {
+    background-color: $bgHomepageColor;
+    display: contents;
+
+    &__title {
+        margin: 117px 30px 40px;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 42px;
+        color: #303943;
+        text-align: center;
+    }
+
+    &__form {
+        @include form-basic-elements;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        max-width: 324px;
+        margin: 0 auto;
+    }
+
+    &__input {
+        @include form-basic-elements;
+        height: 45px;
+        width: 70%;
+        color: #303943;
+
+        &::placeholder {
+            display: flex;
+            align-items: center;
+            text-align: center !important;
+            width: 229px;
+            font-size: 14px;
+            line-height: 42px;
+            color: #303943;
+            opacity: 0.4;
+        }
+    }
+
+    &__button {
+        @include form-basic-elements;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .homepage {
+        width: 100%;
+        
+        &__title {
+            font-size: 35px;
+        }
+
+        &__form {
+            max-width: 524px;
+        }
+
+        &__input {
+            display: flex;
+            justify-content: center;
+                
+            &::placeholder {
+                display: flex;
+                align-items: center;
+                text-align: center !important;
+                width: 345px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .homepage {
+        width: 100%;
+        
+        &__title {
+            font-size: 45px;
+        }
+
+        &__form {
+            max-width: 624px;
+        }
+    }
+}
