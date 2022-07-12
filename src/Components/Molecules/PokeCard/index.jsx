@@ -1,11 +1,14 @@
 import React from "react"
+import { Route, BrowserRouter, Link } from "react-router-dom"
+
 import style from './style.scss'
+
 import background from '@assets/images/bg-pokeballAndDetail.png'
-import heartImage from '@assets/icons/love.svg'
-import leftArrow from '@assets/icons/back.svg'
 import Bulba from '@assets/images/bulba.png'
 import backgroundItem from '@assets/images/element.png'
 import backgroundPokeball from '@assets/images/subtract.png'
+import heartImage from '@assets/icons/love.svg'
+import leftArrow from '@assets/icons/back.svg'
 
 const PokeCard = (props) => {
     return (
