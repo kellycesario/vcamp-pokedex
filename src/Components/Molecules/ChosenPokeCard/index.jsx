@@ -1,5 +1,5 @@
 import React from "react"
-import { Route, BrowserRouter, Link, useState } from "react-router-dom"
+import { Route, BrowserRouter, Link } from "react-router-dom"
 
 import style from './style.scss'
 
@@ -10,7 +10,7 @@ import backgroundPokeball from '@assets/images/subtract.png'
 import heartImage from '@assets/icons/love.svg'
 import leftArrow from '@assets/icons/back.svg'
 
-const PokeCard = (props) => {
+const ChosenPokeCard = (props) => {
     return (
         <section className="pokeCard">
             
@@ -49,4 +49,4 @@ const PokeCard = (props) => {
     )
 }
 
-export default PokeCard;
+export default ChosenPokeCard;

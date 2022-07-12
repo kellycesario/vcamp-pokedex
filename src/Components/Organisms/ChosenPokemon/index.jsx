@@ -1,12 +1,12 @@
 import React from "react"
-import { Route, BrowserRouter, Link, useState } from "react-router-dom"
+import { Route, BrowserRouter, Link } from "react-router-dom"
 
-import PokeCard from '@components/Molecules/PokeCard'
+import ChosenPokeCard from '@components/Molecules/ChosenPokeCard'
 
 const ChosenPokemon = () => {
     return (
         <>
-            <PokeCard />
+            <ChosenPokeCard />
         </>
     )  
 }

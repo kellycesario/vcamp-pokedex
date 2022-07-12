@@ -52,53 +52,49 @@
   border-radius: 100px;
   height: 45px;
   width: 70%;
+  color: #303943;
 }
 
 .homepage__input::-webkit-input-placeholder {
-  width: 229px;
-  font-size: 14px;
-  line-height: 42px;
-  color: #303943;
-  opacity: 0.4;
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
           align-items: center;
   text-align: center !important;
+  width: 229px;
+  font-size: 14px;
+  line-height: 42px;
+  color: #303943;
+  opacity: 0.4;
 }
 
 .homepage__input:-ms-input-placeholder {
-  width: 229px;
-  font-size: 14px;
-  line-height: 42px;
-  color: #303943;
-  opacity: 0.4;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
   text-align: center !important;
+  width: 229px;
+  font-size: 14px;
+  line-height: 42px;
+  color: #303943;
+  opacity: 0.4;
 }
 
 .homepage__input::-ms-input-placeholder {
-  width: 229px;
-  font-size: 14px;
-  line-height: 42px;
-  color: #303943;
-  opacity: 0.4;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
   text-align: center !important;
-}
-
-.homepage__input::placeholder {
   width: 229px;
   font-size: 14px;
   line-height: 42px;
   color: #303943;
   opacity: 0.4;
+}
+
+.homepage__input::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,6 +102,11 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center !important;
+  width: 229px;
+  font-size: 14px;
+  line-height: 42px;
+  color: #303943;
+  opacity: 0.4;
 }
 
 .homepage__button {
@@ -134,15 +135,37 @@
             justify-content: center;
   }
   .homepage__input::-webkit-input-placeholder {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    text-align: center !important;
     width: 345px;
   }
   .homepage__input:-ms-input-placeholder {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    text-align: center !important;
     width: 345px;
   }
   .homepage__input::-ms-input-placeholder {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    text-align: center !important;
     width: 345px;
   }
   .homepage__input::placeholder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center !important;
     width: 345px;
   }
 }
