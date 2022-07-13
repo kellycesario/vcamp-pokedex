@@ -1,20 +1,12 @@
 import { Link } from 'react-router-dom'
 import './styles.scss'
 
-export const capitalize = (str = "") => {
-  if (!str) return "";
-  return str.charAt(0).toUpperCase() + str.slice(1);
-};
-
-export const formatId = (id) => {
-  if (id < 10) return `#00${id}`;
-  if (id < 100) return `#0${id}`;
-  return `#${id}`;
-};
+import { capitalize, formatId } from './../../../utils/formatData'
 
 const PokemonCard = ({ name, types, id, sprites }) => {
 
   return (
+    <Link to={`/pokedex/${name}`} className="pokemonCard">
     <li className={`pokemonCard pokemonCard--${types[0].type.name}`}>
 
       <div className="pokemonCard__pokemonInfoLeft">
@@ -30,6 +22,7 @@ const PokemonCard = ({ name, types, id, sprites }) => {
         <img className='pokemonCard__pokemonImage' src={sprites.other['official-artwork']['front_default']} alt="" />
       </div>
     </li>
+    </Link>
   )
 }
 export default PokemonCard
