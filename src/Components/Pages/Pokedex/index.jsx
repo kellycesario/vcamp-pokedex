@@ -7,26 +7,7 @@ import { useState } from 'react'
 import './styles.scss'
 
 const Pokedex = () => {
-  const [pokemonList, setPokemonList] = useState([])
-
-  const getPokemonList = async () => {
-    const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=150`)
-    const data = await res.json()
-
-    const { results } = data
-
-    results.forEach(async (pokemon) => {
-      const res = await fetch(pokemon.url)
-      const data = await res.json()
-      setPokemonList(prevList => [...prevList, data])
-    })
-  }
-
-  useEffect(() => {
-    getPokemonList()
-  }, [])
-
-  return (
+   return (
     <div className='pokedexPage'>
       <div className="pokedexPage__container">
         <Navbar />

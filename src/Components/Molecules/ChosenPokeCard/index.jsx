@@ -11,26 +11,10 @@ import backgroundPokeball from '@assets/images/subtract.png'
 import heartImage from '@assets/icons/love.svg'
 import leftArrow from '@assets/icons/back.svg'
 
-import {fetchPokemon} from '@services/fetchPokemonData'
-
 import { capitalize, formatId } from './../../../utils/formatData'
 
 const ChosenPokeCard = (props) => {
-    const [pokemon, setPokemon] = useState({})
-    const [loading, setLoading] = useState(false)
-    const getpokemonData = async () => {
-        const pokemonData = await fetchPokemon('bulbasaur')
-        setPokemon(pokemonData)
-        setLoading(true)
-        }
-     //  pokemonData();
-
-    useEffect(() => {
-        getpokemonData()
-    } , [])
-
-   // console.log(pokemon)
-    
+  
     return (
         <section className="pokeCard">
             
