@@ -8,7 +8,7 @@
 .pokeCard {
   background: #48D0B0;
   width: 100%;
-  background-image: url(assets/images/element.png);
+  background-image: url('assets/images/element.png');
   background-repeat: no-repeat;
   position: absolute;
 }

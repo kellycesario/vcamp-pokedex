@@ -12,7 +12,7 @@ $text-color: #ffffff;
 .pokeCard {
     background: $grass-color;
     width: 100%;
-    background-image: url(assets/images/element.png);
+    background-image: url('/public/assets/images/Element.png');
     background-repeat: no-repeat;
     position: absolute; 
 
@@ -95,6 +95,7 @@ $text-color: #ffffff;
     }
 
     &__pokemonImage {
+        width: 234px;
         margin-bottom: -50px;
         position: relative;
     }
@@ -103,6 +104,7 @@ $text-color: #ffffff;
         background-color: $text-color;
         border-top-left-radius: 55px;
         border-top-right-radius: 55px;
+        height: 100vh;
     }
 
     &__list {
@@ -127,5 +129,13 @@ $text-color: #ffffff;
             color: #000000;
             transition-timing-function: ease-in-out;
         }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .pokeCard__pokemonImage {
+        width: 320px;
+        margin-bottom: -50px;
+        position: relative;
     }
 }

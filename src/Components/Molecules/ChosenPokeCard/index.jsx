@@ -4,6 +4,7 @@ import { Outlet, useParams } from 'react-router-dom';
 
 import MenuRoutes from '@components/molecules/menuItems'
 
+import topBackground from '@assets/images/Element.png'
 import backgroundPokeball from '@assets/images/subtract.png'
 import heartImage from '@assets/icons/love.svg'
 import leftArrow from '@assets/icons/back.svg'
@@ -32,7 +33,6 @@ const ChosenPokeCard = () => {
             </div>
 
             <div className="pokeCard__units">
-
                 {pokemon.isLoading && pokemon.types.map(item => {
                     return (
                         <p className="pokeCard__element"> {item.type.name} </p>
@@ -45,7 +45,7 @@ const ChosenPokeCard = () => {
             <div className="pokeCard__images">
                 <img className="pokeCard__pokeballBackground" src={backgroundPokeball} />
                 {pokemon.sprites ? (
-                    <img src={pokemon.sprites.other['official-artwork']['front_default'] || ''} />
+                    <img className="pokeCard__pokemonImage" src={pokemon.sprites.other['official-artwork']['front_default'] || ''} />
                 ) : (
                     null
                 )
