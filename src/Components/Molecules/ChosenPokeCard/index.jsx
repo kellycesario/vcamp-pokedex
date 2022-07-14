@@ -1,23 +1,24 @@
-import React, { useState, useEffect } from "react"
-
-import style from './style.scss'
+import { useContext } from 'react';
+import { Context } from "@context/context";
+import { Outlet, useParams } from 'react-router-dom';
 
 import MenuRoutes from '@components/molecules/menuItems'
 
-import background from '@assets/images/bg-pokeballAndDetail.png'
-import Bulba from '@assets/images/bulba.png'
-import backgroundItem from '@assets/images/element.png'
 import backgroundPokeball from '@assets/images/subtract.png'
 import heartImage from '@assets/icons/love.svg'
 import leftArrow from '@assets/icons/back.svg'
+import './style.scss'
 
 import { capitalize, formatId } from './../../../utils/formatData'
 
-const ChosenPokeCard = (props) => {
-  
+const ChosenPokeCard = () => {
+    const { pokemonList } = useContext(Context)
+    const { pokemonId } = useParams()
+    const pokemon = pokemonList.filter(item => item.name === pokemonId)[0] || []
     return (
+
         <section className="pokeCard">
-            
+
             <div className="pokeCard__objects">
                 <button className="pokeCard__button">
                     <img src={leftArrow} className="pokeCard__arrowImage" />
@@ -31,28 +32,29 @@ const ChosenPokeCard = (props) => {
             </div>
 
             <div className="pokeCard__units">
-    
-                {loading && pokemon.types.map(item => { 
+
+                {pokemon.isLoading && pokemon.types.map(item => {
                     return (
                         <p className="pokeCard__element"> {item.type.name} </p>
                     )
-                
-            })}
+
+                })}
                 <p className="pokeCard__type">{pokemon.type}</p>
             </div>
 
             <div className="pokeCard__images">
                 <img className="pokeCard__pokeballBackground" src={backgroundPokeball} />
                 {pokemon.sprites ? (
-                                    <img src={pokemon.sprites.other['official-artwork']['front_default'] || ''} />
-                                    ) : ( 
-                                            null
-                                        )
+                    <img src={pokemon.sprites.other['official-artwork']['front_default'] || ''} />
+                ) : (
+                    null
+                )
                 }
             </div>
 
             <div className="pokeCard__menu">
                 <MenuRoutes />
+                <Outlet />
             </div>
         </section>
     )
