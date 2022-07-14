@@ -3,8 +3,9 @@ import React from 'react';
 import style from './style.scss';
 
 const Moves = () => {
-    return(
+    return (
         <>
+            <h1>moves</h1>
         </>
     );
 }
