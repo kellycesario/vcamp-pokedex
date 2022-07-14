@@ -33,13 +33,15 @@ const ChosenPokeCard = () => {
             </div>
 
             <div className="pokeCard__units">
-                {pokemon.isLoading && pokemon.types.map(item => {
+
+                {pokemon ? pokemon.types.map(item => {
                     return (
                         <p className="pokeCard__element"> {item.type.name} </p>
                     )
 
-                })}
-                <p className="pokeCard__type">{pokemon.type}</p>
+
+                }) : null}
+                <p className="pokeCard__type">Pokemon</p>
             </div>
 
             <div className="pokeCard__images">
