@@ -3,8 +3,9 @@ import React from 'react';
 import style from './style.scss';
 
 const Evolution = () => {
-    return(
+    return (
         <>
+            <h1>evolution</h1>
         </>
     );
 }
