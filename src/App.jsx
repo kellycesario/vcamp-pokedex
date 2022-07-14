@@ -21,9 +21,9 @@ function App() {
           <Route path='pokedex' element={<Pokedex />} />
           <Route path='pokedex/:pokemonId/*' element={<ChosenPokemon />} >
             <Route path='about' element={<About />} />
-            <Route element={<BaseStats />} path="basestats" />
-            <Route element={<Evolution />} path="evolution" />
-            <Route element={<Moves />} path="moves" />
+            <Route path="basestats" element={<BaseStats />} />
+            <Route path="evolution" element={<Evolution />} />
+            <Route path="moves" element={<Moves />} />
           </Route>
         </Routes>
       </ContextProvider>
