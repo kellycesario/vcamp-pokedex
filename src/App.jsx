@@ -4,6 +4,11 @@ import Pokedex from '@components/Pages/Pokedex'
 import ChosenPokemon from '@components/Organisms/ChosenPokemon'
 import { ContextProvider } from '@context/context';
 
+import About from '@components/atoms/menuAbout'
+import BaseStats from '@components/atoms/menuBaseStats'
+import Evolution from '@components/atoms/menuEvolution'
+import Moves from '@components/atoms/menuMoves'
+
 import './App.scss'
 
 function App() {
@@ -14,7 +19,12 @@ function App() {
         <Routes>
           <Route path='/' element={<Homepage />} />
           <Route path='pokedex' element={<Pokedex />} />
-          <Route path='pokemon/*' element={<ChosenPokemon />} />
+          <Route path='pokedex/:pokemonId/*' element={<ChosenPokemon />} >
+            <Route path='about' element={<About />} />
+            <Route element={<BaseStats />} path="basestats" />
+            <Route element={<Evolution />} path="evolution" />
+            <Route element={<Moves />} path="moves" />
+          </Route>
         </Routes>
       </ContextProvider>
     </div>
