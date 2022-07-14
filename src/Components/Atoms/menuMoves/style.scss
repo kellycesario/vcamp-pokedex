@@ -1,0 +1,30 @@
+@import url(//db.onlinewebfonts.com/c/961a181da27e7cbc072ec2fb5bbfe2a9?family=Circular+Std+Bold);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Circular Std', sans-serif;
+}
+
+.pokeCard__moves {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pokeCard__title {
+    font-size: 16px;
+    padding: 0 26px;
+}
+
+.pokeCard__underConstructionText {
+    font-size: 12px;
+    line-height: 46px;
+    text-align: center;
+    color: #cc7f63;
+}
+
+.pokeCard__underConstructionImage {
+    width: 250px;
+    align-self: center;
+}
