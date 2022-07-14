@@ -1,11 +1,6 @@
 import React from "react"
 import { NavLink } from "react-router-dom";
 
-import About from '@components/atoms/menuAbout'
-import BaseStats from '@components/atoms/menuBaseStats'
-import Evolution from '@components/atoms/menuEvolution'
-import Moves from '@components/atoms/menuMoves'
-
 const MenuRoutes = () => {
     return (
         <>
@@ -16,13 +11,13 @@ const MenuRoutes = () => {
                     </NavLink>
                 </li>
                 <li className="pokeCard__item"
-                ><NavLink to='about'>Base Stats </NavLink>
+                ><NavLink to='basestats'>Base Stats </NavLink>
                 </li>
                 <li className="pokeCard__item">
-                    <NavLink to='about'>Evolution </NavLink>
+                    <NavLink to='evolution'>Evolution </NavLink>
                 </li>
                 <li className="pokeCard__item">
-                    <NavLink to='about'>Moves </NavLink>
+                    <NavLink to='moves'>Moves </NavLink>
                 </li>
             </ul>
 
