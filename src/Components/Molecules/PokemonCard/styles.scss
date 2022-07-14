@@ -82,6 +82,10 @@
     background-color: #F85888;
   }
 
+  &__routerLink {
+    text-decoration: none;
+  }
+
   &__pokemonInfoLeft {
     display: flex;
     flex-direction: column;
