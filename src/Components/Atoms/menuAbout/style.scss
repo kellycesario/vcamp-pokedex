@@ -1,0 +1,127 @@
+@import url(//db.onlinewebfonts.com/c/961a181da27e7cbc072ec2fb5bbfe2a9?family=Circular+Std+Bold);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Circular Std', sans-serif;
+}
+
+@mixin textDefault {
+    font-size: 14px;
+    line-height: 28px;
+    color: #303943;
+    opacity: 0.4;
+    text-align: left;
+}
+
+@mixin subTextDefault {
+    font-size: 14px;
+    line-height: 28px;
+    color: #303943;
+    text-align: left;
+}
+
+.pokeCard__aboutText {
+    padding: 0 36px;
+    font-size: 14px;
+    line-height: 24px; 
+    color: #303943;
+}
+
+.pokeCard__aboutCharacteristics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 28px 28px;
+    padding: 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 23px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+}
+
+.pokeCard__aboutHeight {
+    grid-area: 1/1/2/2;
+    @include textDefault;
+}
+
+.pokeCard__aboutHeightData {
+    grid-area: 2/1/3/2;
+    @include subTextDefault;
+}
+
+.pokeCard__aboutWeight {
+    grid-area: 1/2/2/3;
+    @include textDefault;
+}
+
+.pokeCard__aboutWeightData {
+    grid-area: 2/2/3/3;
+    @include subTextDefault;
+}
+
+.pokeCard__aboutBreeding {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-row-gap: 12px;
+    margin: 28px 28px;
+}
+
+.pokeCard__aboutBreedingTitle {
+    grid-area: 1/1/2/4;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+    color: #303943;
+}
+
+.pokeCard__aboutGender {
+    @include textDefault;
+    grid-area: 2/1/3/2;
+}
+
+.pokeCard__aboutMale {
+    grid-area: 2/2/3/3;
+}
+
+.pokeCard__aboutFemale {
+    grid-area: 2/3/3/4;
+}
+
+.pokeCard__aboutEggGroups {
+    @include textDefault;
+    grid-area: 3/1/4/2;
+}
+
+.pokeCard__aboutGroup {
+    grid-area: 3/2/4/3;
+}
+
+.pokeCard__aboutEggCycles {
+    @include textDefault;
+    grid-area: 4/1/5/2;
+}
+
+.pokeCard__aboutCycle {
+    grid-area: 4/2/5/3;
+}
+
+@media screen and (min-width: 768px) {
+    .pokeCard__aboutText {
+        padding: 0 50px;
+        font-size: 20px;
+        line-height: 34px;
+    }
+    
+    .pokeCard__aboutBreedingTitle {
+        font-size: 20px;
+    }
+
+    .pokeCard__aboutGender, .pokeCard__aboutEggGroups, .pokeCard__aboutEggCycles {
+        font-size: 18px;
+    }
+
+    .pokeCard__aboutCharacteristics, .pokeCard__aboutBreeding {
+        margin: 50px;
+    }
+}
