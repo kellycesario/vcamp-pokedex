@@ -1,16 +1,14 @@
 import React, { createContext, useState, useEffect } from "react";
 import { fetchPokemon } from '@services/fetchPokemonData'
 import { fetchPokemonData } from "../services/fetchPokemonData";
+import { useNavigate } from 'react-router-dom';
 
 const initialContextValue =
 {
   pokemonList: [],
   pokemon: {},
-  pokemonSearch: '',
   isLoading: true,
-  handleChange: () => { },
   handleSubmit: () => { },
-  setPokemonSearch: () => { }
 }
 
 export const Context = createContext(initialContextValue);
@@ -19,7 +17,8 @@ export const ContextProvider = ({ children }) => {
   const [pokemonList, setPokemonList] = useState([])
   const [pokemon, setPokemon] = useState({})
   const [isLoading, setIsLoading] = useState(true)
-  const [pokemonSearch, setPokemonSearch] = useState('')
+
+  const navigateToPokemon = useNavigate()
 
   const getPokemonList = async () => {
     const res = await fetchPokemonData()
@@ -42,24 +41,16 @@ export const ContextProvider = ({ children }) => {
   const handleSubmit = (ev, pokemonName) => {
     ev.preventDefault()
     getPokemon(pokemonName.toLowerCase())
-  }
-
-  const handleChange = (ev) => {
-    setPokemonSearch(ev.target.value)
+    navigateToPokemon(`/pokedex/${pokemonName}/about`)
   }
 
   useEffect(() => {
+
     getPokemonList()
   }, [])
 
-  // Effect que busca um pokemon quando o valor do pokemon altera
-
-  useEffect(() => {
-    getPokemon(pokemonSearch)
-  }, [pokemonSearch])
-
   return (
-    <Context.Provider value={{ pokemonList, pokemon, isLoading, handleChange, handleSubmit, setPokemonSearch, pokemonSearch }}>
+    <Context.Provider value={{ pokemonList, pokemon, isLoading, handleSubmit, }}>
       {children}
     </Context.Provider>
   )
