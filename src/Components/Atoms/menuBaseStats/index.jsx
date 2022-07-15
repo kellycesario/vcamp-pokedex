@@ -1,11 +1,15 @@
 import React from 'react';
+import './style.scss';
 
-import style from './style.scss';
+import underConstruction from '@assets/images/underConstruction.png'
 
 const BaseStats = () => {
     return (
-        <><h1>base stats</h1>
-        </>
+        <section className="pokeCard__baseStats">
+            <h2 className="pokeCard__title">Base Stats</h2>
+            <p className="pokeCard__underConstructionText">This page is under construction</p>
+            <img className="pokeCard__underConstructionImage" src={underConstruction} />
+        </section>
     );
 }
 

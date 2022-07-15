@@ -128,3 +128,11 @@
     height: 66px;
   }
 }
+
+@media screen and (min-widtg: 768px){
+  .pokemonCard {
+    width: 200px;
+    height: 150px;
+    background-size: 120px;
+  }
+}

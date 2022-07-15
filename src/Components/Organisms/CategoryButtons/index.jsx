@@ -13,36 +13,38 @@ import Type from '@assets/images/button6-Type.png';
 export default function CategoryButtons() {
     return (
         <section className="categoryButtonsContainer">
-            <ul className="categoryButtons">
-                <CategoryCard 
-                    image={Pokedex}
-                    text= "Pokedex"
-                />
+            <nav>
+                <ul className="categoryButtons">
+                    <CategoryCard 
+                        image={Pokedex}
+                        text= "Pokedex"
+                    />                
 
-                <CategoryCard 
-                    image={Moves}
-                    text= "Moves"
-                />
+                    <CategoryCard 
+                        image={Moves}
+                        text= "Moves"
+                    />
 
-                <CategoryCard 
-                    image={Abilities}
-                    text= "Abilities"
-                />
+                    <CategoryCard 
+                        image={Abilities}
+                        text= "Abilities"
+                    />
 
-                <CategoryCard 
-                    image={Items}
-                    text= "Items"
-                />
-                <CategoryCard 
-                    image={Location}
-                    text= "Location"
-                />
+                    <CategoryCard 
+                        image={Items}
+                        text= "Items"
+                    />
+                    <CategoryCard 
+                        image={Location}
+                        text= "Location"
+                    />
 
-                <CategoryCard 
-                    image={Type}
-                    text= "Type Charts"
-                />
-            </ul>
+                    <CategoryCard 
+                        image={Type}
+                        text= "Type"
+                    />
+                </ul>
+            </nav>
         </section>
     )
 }
