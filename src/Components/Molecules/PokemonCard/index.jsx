@@ -6,7 +6,7 @@ import { capitalize, formatId } from './../../../utils/formatData'
 const PokemonCard = ({ name, types, id, sprites }) => {
 
   return (
-    <Link to={`/pokedex/${name}`} className="pokemonCard__routerLink">
+    <Link to={`/pokedex/${name}/about`} className="pokemonCard__routerLink">
       <li className={`pokemonCard pokemonCard--${types[0].type.name}`}>
 
         <div className="pokemonCard__pokemonInfoLeft">
