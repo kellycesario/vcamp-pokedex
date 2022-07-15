@@ -36,13 +36,10 @@ const ChosenPokeCard = () => {
 
             <div className="pokeCard__units">
 
-                {pokemon ? pokemon.types.map(item => {
-                    return (
-                        <p className="pokeCard__element" key={item.type.name}> {item.type.name}  </p>
-                    )
-
-
-                }) : null}
+                {pokemon
+                    ? pokemon.types.map(item => <p className="pokeCard__element" key={item.type.name}> {item.type.name}  </p>)
+                    : (null)
+                }
                 <p className="pokeCard__type">Pokemon</p>
             </div>
 
