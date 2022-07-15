@@ -6,15 +6,85 @@
     font-family: 'Circular Std', sans-serif;
 }
 
-$grass-color: #48D0B0;
 $text-color: #ffffff;
 
 .pokeCard {
-    background: $grass-color;
     width: 100%;
     background-image: url('/public/assets/images/Element.png');
     background-repeat: no-repeat;
-    position: absolute; 
+    position: absolute;
+
+    &--normal {
+        background-color: #A8A878;
+    }
+
+    &--water {
+        background-color: #77BDFE;
+    }
+
+    &--ice {
+        background-color: #86D1F3,
+    }
+
+    &--grass {
+        background-color: #48D0B0;
+    }
+
+    &--fire {
+        background-color: #FB6C6C;
+    }
+
+    &--dragon {
+        background-color: #7038F8;
+    }
+
+    &--electric {
+        background-color: #FBCD66;
+    }
+
+    &--bug {
+        background-color: #A8B820;
+    }
+
+    &--fairy {
+        background-color: #EE99AC;
+    }
+
+    &--ground {
+        background-color: #E0C068;
+    }
+
+    &--rock {
+        background-color: #B8A038;
+    }
+
+    &--steel {
+        background-color: #42BD94;
+    }
+
+    &--poison {
+        background-color: #A040A0;
+    }
+
+    &--ghost {
+        background-color: #705898;
+    }
+
+    &--dark {
+        background-color: #5A5979;
+    }
+
+    &--flying {
+        background-color: #4A677D;
+    }
+
+    &--fighting {
+        background-color: #994025;
+    }
+
+    &--psychic {
+        background-color: #F85888;
+    }
 
     &__objects {
         display: flex;
@@ -27,7 +97,8 @@ $text-color: #ffffff;
         background: none;
     }
 
-    &__arrowImage, &__heartImage {
+    &__arrowImage,
+    &__heartImage {
         padding: inherit
     }
 
@@ -80,7 +151,7 @@ $text-color: #ffffff;
         height: 18px;
         font-size: 14px;
         line-height: 28px;
-        color: $text-color; 
+        color: $text-color;
     }
 
     &__images {
