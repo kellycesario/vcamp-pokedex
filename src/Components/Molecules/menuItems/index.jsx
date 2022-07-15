@@ -1,7 +1,12 @@
 import React from "react"
+import { useContext } from 'react';
 import { NavLink } from "react-router-dom";
+import { Context } from '@context/context';
 
 const MenuRoutes = () => {
+
+    const { pokemon } = useContext(Context)
+    console.log('menu routes', pokemon)
     return (
         <>
             <ul className="pokeCard__list">
@@ -20,9 +25,6 @@ const MenuRoutes = () => {
                     <NavLink to='moves'>Moves </NavLink>
                 </li>
             </ul>
-
-
-
         </>
     );
 }
