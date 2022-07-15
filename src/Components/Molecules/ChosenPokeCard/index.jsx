@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { Context } from "@context/context";
-import { Outlet, useParams } from 'react-router-dom';
+import { Outlet, useParams, Link } from 'react-router-dom';
 
 import MenuRoutes from '@components/molecules/menuItems'
 
@@ -20,9 +20,11 @@ const ChosenPokeCard = () => {
 
         <section className="pokeCard">
 
-            <div className="pokeCard__objects">
+            <div className="pokeCard__objects"> 
                 <button className="pokeCard__button">
-                    <img src={leftArrow} className="pokeCard__arrowImage" />
+                    <Link to="/Pokedex">
+                        <img src={leftArrow} className="pokeCard__arrowImage" />
+                    </Link>
                 </button>
                 <img src={heartImage} className="pokeCard__heartImage" />
             </div>
