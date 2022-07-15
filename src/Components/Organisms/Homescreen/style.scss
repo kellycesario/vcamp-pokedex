@@ -51,6 +51,7 @@ $bgHomepageColor: #FFFFFF;
         height: 45px;
         width: 70%;
         color: #303943;
+        opacity: 0.4;
 
         &::placeholder {
             display: flex;
@@ -84,6 +85,9 @@ $bgHomepageColor: #FFFFFF;
         &__input {
             display: flex;
             justify-content: center;
+            padding-left: 26px;
+            color: #303943;
+            opacity: 0.4;
                 
             &::placeholder {
                 display: flex;
