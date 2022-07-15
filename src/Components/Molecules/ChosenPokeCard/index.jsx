@@ -18,9 +18,9 @@ const ChosenPokeCard = () => {
     const pokemon = pokemonList.filter(item => item.name === pokemonId)[0] || []
     return (
 
-        <section className="pokeCard">
+        <section className={`pokeCard pokeCard--${!pokemon.types ? '' : pokemon.types[0].type.name}`} >
 
-            <div className="pokeCard__objects"> 
+            <div className="pokeCard__objects">
                 <button className="pokeCard__button">
                     <Link to="/Pokedex">
                         <img src={leftArrow} className="pokeCard__arrowImage" />
