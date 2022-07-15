@@ -1,0 +1,16 @@
+.pokeCard__navigation {
+    text-decoration: none;
+    color: #303943;
+    opacity: 0.4;
+    
+    &:visited {
+        text-decoration: none;
+        color: #000000;
+    }
+    &:active {
+        color: #000000;
+    }
+    &:hover {
+        color: #000000;
+    }
+}
