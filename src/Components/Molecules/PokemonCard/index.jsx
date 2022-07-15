@@ -2,12 +2,16 @@ import { Link } from 'react-router-dom'
 import './styles.scss'
 
 import { capitalize, formatId } from '@utils/formatData'
+import { useContext } from 'react'
+import { Context } from '@context/context'
 
 const PokemonCard = ({ name, types, id, sprites }) => {
 
+  const { handleSubmit } = useContext(Context)
+
   return (
     <Link to={`/pokedex/${name}/about`} className="pokemonCard__routerLink">
-      <li className={`pokemonCard pokemonCard--${types[0].type.name}`}>
+      <li className={`pokemonCard pokemonCard--${types[0].type.name}`} onClick={(ev) => handleSubmit(ev, name)}>
 
         <div className="pokemonCard__pokemonInfoLeft">
           <h2 className="pokemonCard__pokemonName">{capitalize(name)}</h2>
