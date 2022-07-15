@@ -192,13 +192,20 @@ $text-color: #ffffff;
         font-size: 14px;
         line-height: 28px;
         color: #303943;
-        opacity: 0.4;
         font-weight: 500;
 
         &:hover {
             font-weight: 600;
             color: #000000;
             transition-timing-function: ease-in-out;
+        }
+  
+        &:visited {
+            text-decoration: none;
+            color: #000000;
+        }
+        &:active {
+            color: #000000;
         }
     }
 }

@@ -53,6 +53,7 @@
   height: 45px;
   width: 70%;
   color: #303943;
+  opacity: 0.4;
 }
 
 .homepage__input::-webkit-input-placeholder {
@@ -133,6 +134,9 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding-left: 26px;
+    color: #303943;
+    opacity: 0.4;
   }
   .homepage__input::-webkit-input-placeholder {
     display: -webkit-box;

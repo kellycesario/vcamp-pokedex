@@ -8,7 +8,7 @@
 .pokeCard {
   background: #48D0B0;
   width: 100%;
-  background-image: url('assets/images/element.png');
+  background-image: url("/public/assets/images/Element.png");
   background-repeat: no-repeat;
   position: absolute;
 }
@@ -112,6 +112,7 @@
 }
 
 .pokeCard__pokemonImage {
+  width: 234px;
   margin-bottom: -50px;
   position: relative;
 }
@@ -120,6 +121,7 @@
   background-color: #ffffff;
   border-top-left-radius: 55px;
   border-top-right-radius: 55px;
+  height: 100vh;
 }
 
 .pokeCard__list {
@@ -138,7 +140,6 @@
   font-size: 14px;
   line-height: 28px;
   color: #303943;
-  opacity: 0.4;
   font-weight: 500;
 }
 
@@ -147,5 +148,22 @@
   color: #000000;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
+}
+
+.pokeCard__item:visited {
+  text-decoration: none;
+  color: #000000;
+}
+
+.pokeCard__item:active {
+  color: #000000;
+}
+
+@media screen and (min-width: 768px) {
+  .pokeCard__pokemonImage {
+    width: 320px;
+    margin-bottom: -50px;
+    position: relative;
+  }
 }
 /*# sourceMappingURL=style.css.map */

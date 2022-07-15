@@ -15,7 +15,20 @@
 
 .pokedexPage__container {
   margin: 0 auto;
-  width: 85%;
+}
+
+.pokedex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 70px;
 }
 
 .pokedex__title {
@@ -27,11 +40,32 @@
 }
 
 .pokedex__list {
-  list-style: none;
   display: -ms-grid;
   display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   gap: 10px;
+  list-style: none;
+}
+
+@media screen and (min-width: 768px) {
+  .pokedex__title {
+    font-size: 45px;
+    text-align: center;
+  }
+  .pokedex__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 26px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
