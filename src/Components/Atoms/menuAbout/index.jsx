@@ -9,8 +9,7 @@ import './style.scss';
 
 
 const About = () => {
-    const { pokemonList } = useContext(Context)
-    const { pokemonId } = useParams()
+    const { pokemon } = useContext(Context)
 
     return (
         <>
