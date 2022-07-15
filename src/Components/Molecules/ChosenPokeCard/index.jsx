@@ -10,7 +10,7 @@ import heartImage from '@assets/icons/love.svg'
 import leftArrow from '@assets/icons/back.svg'
 import './style.scss'
 
-import { capitalize, formatId } from './../../../utils/formatData'
+import { capitalize, formatId } from '@utils/formatData'
 
 const ChosenPokeCard = () => {
     const { pokemonList } = useContext(Context)

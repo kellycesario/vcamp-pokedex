@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import './styles.scss'
 
-import { capitalize, formatId } from './../../../utils/formatData'
+import { capitalize, formatId } from '@utils/formatData'
 
 const PokemonCard = ({ name, types, id, sprites }) => {
 
