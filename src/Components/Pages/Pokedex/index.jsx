@@ -10,7 +10,7 @@ import Popup from '@components/Organisms/Popup';
 import './styles.scss';
 
 const Pokedex = () => {
-  const PokemonCtx = useContext(Context)
+  const { pokemonList } = useContext(Context)
   return (
     <>
       <div className='pokedexPage'>
@@ -19,7 +19,7 @@ const Pokedex = () => {
           <div className="pokedex">
             <h2 className='pokedex__title'>Pokedex</h2>
             <ul className="pokedex__list">
-              {PokemonCtx.pokemonList.map(pokemon => {
+              {pokemonList.map(pokemon => {
                 return (
                   <PokemonCard name={pokemon.name} id={pokemon.id} types={pokemon.types} sprites={pokemon.sprites} key={pokemon.id} />
                 )
