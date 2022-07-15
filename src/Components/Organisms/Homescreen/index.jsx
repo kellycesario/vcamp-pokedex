@@ -1,12 +1,18 @@
 import React, { useContext } from "react";
 import CategoryButtons from "@components/organisms/categorybuttons";
+import { useRef } from 'react';
 import { Context } from "@context/context";
-import './style.scss';
 import search from "@assets/icons/search.svg";
+
+import './style.scss';
 
 const Homepage = () => {
 
-    const pokemonContext = useContext(Context);
+    const inputRef = useRef()
+
+    const {
+        handleSubmit
+    } = useContext(Context);
 
     return (
         <section className="homepageContainer">
@@ -15,13 +21,13 @@ const Homepage = () => {
                 <form
                     className="homepage__form"
                     action="/"
-                    onSubmit={(ev) => pokemonContext.handleSubmit(ev, pokemonContext.pokemonSearch)}
+                    onSubmit={(ev) => handleSubmit(ev, inputRef.current.value)}
                 >
                     <input
                         className="homepage__input"
                         type="text"
                         placeholder="Search Pokemon, Move, Ability, etc."
-                        onChange={pokemonContext.handleChange}
+                        ref={inputRef}
                     />
                     <button
                         className="homepage__button"
