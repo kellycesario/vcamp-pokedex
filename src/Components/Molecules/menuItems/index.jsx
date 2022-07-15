@@ -7,8 +7,6 @@ import './style.scss'
 
 const MenuRoutes = () => {
 
-    const { pokemon } = useContext(Context)
-    console.log('menu routes', pokemon)
     return (
         <>
             <ul className="pokeCard__list">
@@ -18,18 +16,18 @@ const MenuRoutes = () => {
                     </NavLink>
                 </li>
                 <li className="pokeCard__item">
-                    <NavLink to='basestats'className="pokeCard__navigation">
-                        Base Stats 
+                    <NavLink to='basestats' className="pokeCard__navigation">
+                        Base Stats
                     </NavLink>
                 </li>
                 <li className="pokeCard__item">
                     <NavLink to='evolution' className="pokeCard__navigation">
-                        Evolution 
+                        Evolution
                     </NavLink>
                 </li>
                 <li className="pokeCard__item">
                     <NavLink to='moves' className="pokeCard__navigation">
-                        Moves 
+                        Moves
                     </NavLink>
                 </li>
             </ul>
