@@ -31,6 +31,8 @@ const MenuRoutes = () => {
                     </NavLink>
                 </li>
             </ul>
+
+            <div className="pokeCard__line"></div>
         </>
     );
 }
